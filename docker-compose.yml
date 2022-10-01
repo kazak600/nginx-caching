@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: cached_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./images:/home/www-data/mysite
